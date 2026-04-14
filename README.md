@@ -16,7 +16,13 @@
 
     - `uv pip install -e .`
 
-- Rode o script com `uv run src/main.py` ou os testes com `uv run pytest -s`
+- Rode o script da primeira tarefa com `uv run src/main.py` 
+
+    - segunda tarefa (parte 1): `uv run src/main2.py`
+
+    - segunda tarefa (parte 2): `uv run src/main3.py`
+
+- ou os testes com `uv run pytest -s`
 
 ## Complexidade de Representações de Grafos
 

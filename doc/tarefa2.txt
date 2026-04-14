@@ -1,0 +1,44 @@
+Implementar:
+Uma DFS modificada que conta e exibe o número de trilhas simples (sem ciclos) possíveis entre dois vértices, até um comprimento máximo definido.
+
+Uma função de verificação que recebe uma sequência de vértices e identifica se ela corresponde a um caminho válido, trilha ou circuito no grafo.
+
+
+Parte 1 – DFS Modificada
+Implementar uma função que:
+
+Receba como entrada:
+
+um grafo G,
+
+um vértice de origem u,
+
+um vértice de destino v,
+
+um inteiro k (comprimento máximo permitido).
+
+Percorra o grafo usando uma variação do algoritmo DFS, explorando todos os caminhos possíveis sem repetição de vértices (ou seja, sem circuitos).
+
+Conte e exiba todos os caminhos válidos de u até v, cujo comprimento seja ≤ k.
+
+Retorne o número total de trilhas encontradas entre u e v.
+
+
+Parte 2 – Verificação de Sequência
+Implementar uma função que:
+
+Receba como entrada um grafo G e uma sequência de vértices S = [v1, v2, ..., vn].
+
+Verifique:
+
+Se a sequência é um passeio válido (todas as arestas existem).
+
+Se a sequência é um caminho (sem repetição de vértices).
+
+Se a sequência é uma trilha (sem repetição de arestas, mas pode repetir vértices).
+
+Se a sequência é um circuito (trilha fechada: primeiro vértice = último vértice).
+
+Exiba o resultado.
+
+

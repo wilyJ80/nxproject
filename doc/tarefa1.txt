@@ -1,0 +1,13 @@
+Implementar funções para converter e visualizar grafos a partir de arquivos. Utilizar como base o código fornecido pelo Teams.
+
+Funções a implementar:
+Grafo para matriz adjacências(G):
+Retorna uma matriz 2D representando as conexões do grafo;
+Armazenar pesos se existirem, caso contrário 1 ou 0.
+Grafo para matriz incidências(G):
+Retorna a matriz de incidência do grafo.
+Grafo para lista adjacências(G):
+Retorna a lista de adjacência em formato de dicionário.
+
+Analisar espaço em memória: O(V 2 ) vs O(V · E ) vs O(V + E ).
+
