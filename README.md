@@ -1,6 +1,6 @@
 # Projeto: grafos com `networkx`
 
-- O projeto usa como código base o arquivo `codigobase.py`, mas implementa a versão final em `src/main.py`
+- O projeto usa como código base o arquivo `codigobase.py`, mas implementa as versões finais no diretório `src/`
 
 ## Como rodar
 
@@ -21,6 +21,8 @@
     - segunda tarefa (parte 1): `uv run src/main2.py`
 
     - segunda tarefa (parte 2): `uv run src/main3.py`
+
+    - terceira tarefa: `uv run src/main4.py`
 
 - ou os testes com `uv run pytest -s`
 
