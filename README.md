@@ -24,7 +24,47 @@
 
     - terceira tarefa: `uv run src/main4.py`
 
+    - quarta tarefa (Dijkstra e Bellman-Ford): `uv run src/main5.py`
+
 - ou os testes com `uv run pytest -s`
+
+## Algoritmos de Menor Caminho (Tarefa 4)
+
+O script `src/main5.py` implementa os algoritmos de **Dijkstra** e **Bellman-Ford** para encontrar o menor caminho entre dois vértices em um grafo ponderado.
+
+### Como usar
+
+1. Execute o script: `uv run src/main5.py`
+2. Informe o caminho do arquivo de grafo (ex: `grafo_exemplo.txt`).
+3. Informe o vértice de origem.
+4. Informe o vértice de destino.
+
+### Exemplo de Uso
+
+Utilizando o arquivo `grafo_exemplo.txt`:
+```
+D W
+A B 4
+A C 2
+B C 1
+B D 5
+C D 8
+C E 10
+D E 2
+E F 3
+```
+
+**Execução:**
+- Origem: `A`
+- Destino: `F`
+- **Resultado esperado:**
+    - Menor caminho: `A -> B -> D -> E -> F` (pode variar se houver caminhos de mesmo custo, mas este é um deles)
+    - Custo total: `14.0`
+
+### Diferenças entre os Algoritmos
+
+- **Dijkstra:** Mais eficiente, porém não suporta arestas com pesos negativos.
+- **Bellman-Ford:** Suporta pesos negativos e é capaz de detectar ciclos negativos no grafo.
 
 ## Complexidade de Representações de Grafos
 
