@@ -26,7 +26,19 @@
 
     - quarta tarefa (Dijkstra e Bellman-Ford): `uv run src/main5.py`
 
+    - quinta tarefa (Kruskal): `uv run src/main6.py`
+
 - ou os testes com `uv run pytest -s`
+
+## Algoritmo de Kruskal (Tarefa 5)
+
+O script `src/main6.py` implementa o **Algoritmo de Kruskal** para encontrar a Árvore Geradora Mínima (MST) de um grafo ponderado não-direcionado.
+
+### Como usar
+
+1. Execute o script: `uv run src/main6.py`
+2. Informe o caminho do arquivo de grafo (ex: `test/kruskal_test_input.txt`).
+3. Informe o caminho do arquivo de imagem de saída (ex: `output/mst.png`).
 
 ## Algoritmos de Menor Caminho (Tarefa 4)
 
