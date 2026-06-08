@@ -28,7 +28,19 @@
 
     - quinta tarefa (Kruskal): `uv run src/main6.py`
 
+    - sexta tarefa (Algoritmo Húngaro): `uv run src/main7.py`
+
 - ou os testes com `uv run pytest -s`
+
+## Algoritmo Húngaro (Tarefa 6)
+
+O script `src/main7.py` implementa o **Algoritmo Húngaro** para encontrar o emparelhamento de custo mínimo em um grafo bipartido ponderado.
+
+### Como usar
+
+1. Execute o script: `uv run src/main7.py`
+2. Informe o caminho do arquivo de grafo (ex: `test/hungarian_test_input.txt`).
+3. Informe o caminho do arquivo de imagem de saída (ex: `output/matching.png`).
 
 ## Algoritmo de Kruskal (Tarefa 5)
 
