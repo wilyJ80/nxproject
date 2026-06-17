@@ -1,0 +1,83 @@
+Planaridade pelo Algoritmo de Boyer–Myrvold
+Vence hoje às 23:59
+•
+Fecha 22 de junho de 2026 às 23:59
+Instruções
+Implemente (ou inclua em código próprio, de forma controlada e explícita) o Algoritmo de Boyer–Myrvold para realizar o teste de planaridade em um grafo simples. O código deverá:
+
+Ler um grafo a partir de um arquivo texto, seguindo o mesmo formato utilizado nas aulas práticas;
+
+Verificar se o grafo é planar utilizando o algoritmo de Boyer–Myrvold;
+
+Caso o grafo seja planar, produzir um embedding planar (uma imagem do grafo desenhado em sua forma planar);
+
+Caso o grafo não seja planar, identifique e exiba um subgrafo de Kuratowski (K₅ ou K₃,₃), indicando os vértices envolvidos.
+
+Formato do Arquivo de Entrada
+Mesmo formato dos trabalhos anteriores
+
+
+Requisitos do Programa
+1. Leitura do grafo
+Ler o arquivo texto.
+
+Construir o grafo usando networkx ou estruturas próprias.
+
+2. Execução do Algoritmo Boyer–Myrvold
+O programa deve:
+
+Aplicar o teste de planaridade baseado no algoritmo de Boyer–Myrvold;
+
+Sem usar funções de alto nível que façam tudo automaticamente sem que seja demonstrada compreensão.
+
+Pode usar networkx.check_planarity, desde que o aluno:
+
+Explique o algoritmo Boyer–Myrvold no relatório;
+
+Mostre no código como extrair embedding ou Kuratowski a partir do retorno da função.
+
+3. Saída do programa
+Se o grafo for planar:
+Exibir mensagem: "O grafo é planar."
+
+Produzir uma representação planar (embedding):
+
+desenhar o grafo usando a estrutura de embedding retornada pela função;
+
+exibir a imagem  planar.
+
+Se o grafo não for planar:
+Exibir mensagem: "O grafo não é planar."
+
+Mostrar o subconjunto de vértices que formam o subgrafo de Kuratowski identificado.
+
+Exemplo de Saída Esperada
+Caso planar:
+Arquivo: exemplo1.txt Resultado: O grafo é planar. Imagem gerada com embedding planar.
+Caso não-planar:
+Arquivo: exemplo2.txt Resultado: O grafo NÃO é planar. Sequência dos vértices compondo o grafo de Kuratowski.
+Critérios de Avaliação
+(4 pts) Aplicação correta do Algoritmo de Boyer–Myrvold
+
+(1 pts) Leitura e construção adequada do grafo
+
+(2 pts) Identificação e exibição correta de embedding ou Kuratowski
+
+(2 pt) Clareza e organização do código
+
+(1 pt) Relatório curto explicando o algoritmo e como foi usado
+
+Observações (Importante!)
+Não é necessário implementar Boyer–Myrvold do zero (é complexo), mas é obrigatório compreender o funcionamento.
+
+O relatório deve conter uma explicação resumida do algoritmo, conforme visto em aula.
+
+A visualização pode ser feita com networkx e matplotlib.
+
+Para garantir que o aluno compreenda e manipule diretamente a estrutura resultante do algoritmo de Boyer–Myrvold, é proibido utilizar funções que realizam automaticamente o teste de planaridade ou que produzem layouts que ignoram o embedding planar. Assim, não poderão ser utilizadas as funções:
+nx.is_planar, nx.check_planarity(G, False), nx.spring_layout, nx.circular_layout, nx.kamada_kawai_layout, nx.random_layout, nx.shell_layout e qualquer função automática de detecção de subgrafos de Kuratowski (como nx.algorithms.planarity.kuratowski_subgraph).
+
+Somente é permitido o uso de:
+nx.check_planarity(G, True) (obrigatoriamente com retorno do embedding),
+nx.combinatorial_embedding_to_pos(embedding) para converter o embedding em coordenadas de desenho, e as funções básicas de manipulação e desenho de grafos do NetworkX e Matplotlib.
+O desenho final deve necessariamente utilizar as posições obtidas a partir do embedding planar retornado pelo algoritmo.

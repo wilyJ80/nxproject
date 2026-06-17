@@ -30,7 +30,31 @@
 
     - sexta tarefa (Algoritmo Húngaro): `uv run src/main7.py`
 
+    - sétima tarefa (Planaridade - Boyer-Myrvold): `uv run src/main8.py`
+
 - ou os testes com `uv run pytest -s`
+
+## Teste de Planaridade - Boyer-Myrvold (Tarefa 7)
+
+O script `src/main8.py` utiliza o algoritmo de **Boyer-Myrvold** para verificar se um grafo é planar.
+
+### O Algoritmo de Boyer-Myrvold
+
+O algoritmo de Boyer-Myrvold é um método de tempo linear ($O(V)$) para teste de planaridade. Ele funciona processando o grafo em uma ordem de busca em profundidade (DFS) e tentando adicionar arestas de volta ("back-edges") de forma incremental.
+A estrutura central utiliza "PC-trees" ou templates para representar todas as possíveis permutações cíclicas de arestas incidentes em um vértice que mantêm a planaridade. Se uma aresta não puder ser adicionada mantendo essas propriedades, o algoritmo identifica uma obstrução de Kuratowski ($K_5$ ou $K_{3,3}$).
+
+### Como usar
+
+1. Execute o script: `uv run src/main8.py`
+2. Informe o caminho do arquivo de grafo (ex: `grafo01.txt`).
+3. Se for planar, informe o caminho para salvar a imagem do embedding (ex: `output/planar.png`).
+4. Se não for planar, o console exibirá os vértices e arestas que compõem o subgrafo de Kuratowski.
+
+### Implementação no Projeto
+
+Neste projeto, utilizamos a função `networkx.check_planarity(G, counterexample=True)`.
+- **Extração de Embedding:** Quando o grafo é planar, o retorno contém um objeto `PlanarEmbedding`. Utilizamos `nx.combinatorial_embedding_to_pos` para converter essa estrutura em coordenadas cartesianas, garantindo que o desenho não possua cruzamentos de arestas.
+- **Extração de Kuratowski:** Quando o grafo não é planar, o retorno fornece o subgrafo que impede a planaridade, o qual é então analisado para exibir os vértices envolvidos.
 
 ## Algoritmo Húngaro (Tarefa 6)
 
