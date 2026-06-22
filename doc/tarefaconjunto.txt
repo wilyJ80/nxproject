@@ -1,0 +1,39 @@
+Implemente um programa em Python que leia de um arquivo de entrada um grafo não direcionado e determine o seu Conjunto Estável Maximal através de uma heurística gulosa de grau mínimo.
+
+A partir desta única implementação central, o programa deve obrigatoriamente reutilizar a mesma função lógica para identificar e exportar também um Clique Maximal e uma Cobertura de Vértices para o mesmo grafo, aplicando as propriedades matemáticas de complementaridade e dualidade de grafos.
+
+O programa deve gerar três imagens de saída (uma para cada problema), destacando visualmente os vértices e arestas que pertencem a cada uma das soluções encontradas.
+
+Requisitos
+1. Formato do Arquivo de Entrada
+O programa deve ler o grafo a partir de um arquivo texto com formato idêntico ao utilizado nos trabalhos anteriores.
+
+
+2. Lógica de Implementação e Reuso
+O núcleo do seu código deve conter uma função que implementa uma heurística que calcula um Conjunto Estável. Para obter as outras duas estruturas, é expressamente proibido criar novos algoritmos de busca do zero. Você deve adaptar a entrada ou a saída da função central:
+
+Conjunto Estável: Calculado diretamente pela heurística de grau mínimo no grafo original G.
+
+Cobertura de Vértices: Identificada pegando o complemento do Conjunto Estável em relação ao conjunto total de vértices V.
+
+Clique: Calculado executando a mesma função de Conjunto Estável, mas passando como argumento o Grafo Complementar.
+
+3. Visualização Gráfica
+O programa deve gerar e salvar três arquivos de imagem distintos (conjunto_estavel.png, clique.png e cobertura.png). As regras de cores para a plotagem usando networkx e matplotlib são:
+
+Para o Conjunto Estável: Vértices do conjunto em verde; demais vértices em cinza.
+
+Para o Clique: Vértices em vermelho; as arestas internas do clique em vermelho; demais elementos em cinza.
+
+Para a Cobertura: Vértices da cobertura em azul; demais vértices em cinza.
+
+O nome do arquivo de entrada e o prefixo dos nomes das imagens de saída devem ser informados pelo usuário via terminal.
+
+
+
+Critérios de Avaliação
+Pontuação	Critério
+3.0 pts	Correção da Heurística Central: Implementação correta da heurística gulosa para o Conjunto Estável Maximal.
+3.0 pts	Reuso e Adaptação: Dedução correta da Cobertura de Vértices e transformação correta do grafo para encontrar o Clique (uso do grafo complementar), sem duplicar código de busca.
+2.0 pts	Visualização Gráfica: Geração correta das 3 imagens destacando os componentes com as cores especificadas.
+2.0 pts	Qualidade do Código: Clareza, organização estruturada (funções separadas), nomes de variáveis intuitivos e comentários pertinentes.
